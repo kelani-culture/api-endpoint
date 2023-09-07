@@ -12,7 +12,8 @@ class UserInfo(models.Model):
     track = models.CharField(max_length=10,
                              default='backend'
                              )
-    utc_time = models.DateField(default=get_current_time())
+    utc_time = models.CharField(max_length = 100,
+                                default=get_current_time())
 
     github_file_url = models.URLField()
 

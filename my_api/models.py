@@ -15,8 +15,8 @@ class UserInfo(models.Model):
     utc_time = models.CharField(max_length = 100,
                                 default=get_current_time())
 
-    github_file_url = models.URLField()
+    github_file_url = models.URLField(default="https://github.com/kelani-culture/api-endpoint/blob/main/my_api/settings.py")
 
-    github_repo_url = models.URLField()
+    github_repo_url = models.URLField(default="https://github.com/kelani-culture/api-endpoint")
 
     status_code = models.IntegerField(default=200)    

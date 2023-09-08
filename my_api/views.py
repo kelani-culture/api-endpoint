@@ -19,7 +19,7 @@ def user_info(request) -> JsonResponse:
                                                track=track)
         user_info = UserInfo.objects.all()
         user_data = {
-            "slack": user_info[1].slack_name,
+            "slack_name": user_info[1].slack_name,
             "current_day":user_info[1].current_day,
             "utc_time": user_info[1].utc_time,
             "track": user_info[1].track,

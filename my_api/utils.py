@@ -14,8 +14,6 @@ def get_current_time():
     A function that returns the
     current in utc format time
     """
-    dt = datetime.now()
-    utc_datetime = datetime.strftime(dt,\
-                                     "%Y-%m-%dT%H:%M:%SZ"
-                                     )
+    dt = datetime.utcnow()
+    utc_datetime = datetime.strftime(dt,"%Y-%m-%dT%H:%M:%SZ")
     return utc_datetime
